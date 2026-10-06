@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme static {
+  --font-sans: 'Public Sans', sans-serif;
+  --color-green-50: #effdf5;
+  --color-green-100: #d9fbe8;
+  --color-green-200: #b3f5d1;
+  --color-green-300: #75edae;
+  --color-green-400: #00dc82;
+  --color-green-500: #00c16a;
+  --color-green-600: #00a155;
+  --color-green-700: #007f45;
+  --color-green-800: #016538;
+  --color-green-900: #0a5331;
+  --color-green-950: #052e16;
+}
+
+html {
+  font-family: var(--font-sans);
+  background: var(--ui-bg-muted);
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  min-width: 360px;
+  background: var(--ui-bg-muted);
+  color: var(--ui-text);
+}
+
+.gateway-app-surface {
+  min-height: 100vh;
+  background-color: var(--ui-bg-muted);
+  color: var(--ui-text-highlighted);
+}
+
+.dark .bg-emerald-50 {
+  background-color: color-mix(in srgb, var(--color-emerald-950) 55%, transparent);
+}
+
+.dark .text-emerald-700 {
+  color: var(--color-emerald-300);
+}
+
+.dark .border-emerald-200 {
+  border-color: var(--color-emerald-800);
+}
