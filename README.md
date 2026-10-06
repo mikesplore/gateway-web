@@ -6,10 +6,10 @@ Nuxt 4 + Nuxt UI dashboard for the GateWay Ktor API. It includes operator sign-i
 
 ```bash
 npm install
-NUXT_GATEWAY_API_BASE=http://localhost:8080 npm run dev
+npm run dev
 ```
 
-Open the URL printed by Nuxt. For production, set `NUXT_GATEWAY_API_BASE` to the private/reachable GateWay API URL before running `npm run build` and `npm run preview` (or the generated Node server). The browser calls Nuxt's same-origin `/api/gateway/*` proxy; the backend session cookie is forwarded without exposing merchant keys or `GATEWAY_OPS_TOKEN` to client code.
+Set `NUXT_GATEWAY_API_BASE` in `.env` to the private/reachable GateWay API URL (for example, `NUXT_GATEWAY_API_BASE=http://localhost:8080`), then run `npm run dev`. Nuxt loads `.env` automatically during development. For production, provide `NUXT_GATEWAY_API_BASE` in the runtime environment before running `npm run preview` (or the generated Node server). The browser calls Nuxt's same-origin `/api/gateway/*` proxy; the backend session cookie is forwarded without exposing merchant keys or `GATEWAY_OPS_TOKEN` to client code.
 
 ## First sign-in
 
